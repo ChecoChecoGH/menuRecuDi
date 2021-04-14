@@ -6,24 +6,26 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<GridPane alignment="center" hgap="10" prefHeight="651.0" prefWidth="888.0" style="-fx-background-color: #FF69B4;" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<GridPane alignment="center" hgap="10" prefHeight="651.0" prefWidth="888.0" style="-fx-background-color: f885d0;" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <columnConstraints>
       <ColumnConstraints />
    </columnConstraints>
    <rowConstraints>
       <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
    </rowConstraints>
    <children>
-      <AnchorPane prefHeight="495.0" prefWidth="715.0">
+      <AnchorPane prefHeight="387.0" prefWidth="715.0">
          <children>
-            <VBox layoutX="13.0" layoutY="14.0" prefHeight="468.0" prefWidth="691.0" spacing="5.0">
+            <VBox layoutX="13.0" layoutY="14.0" prefHeight="371.0" prefWidth="691.0" spacing="5.0">
                <children>
                   <AnchorPane prefHeight="43.0" prefWidth="691.0">
                      <children>
                         <ImageView fitHeight="40.0" fitWidth="37.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../AppData/Local/Temp/home.png" />
-                           </image></ImageView>
+
+                              <Image url="@../../../../AppData/Local/Temp/home.png" />
+                           </ImageView>
                         <Label layoutX="46.0" prefHeight="50.0" prefWidth="577.0" text="  Tareas" textFill="WHITE">
                            <font>
                               <Font name="Comic Sans MS" size="35.0" />
@@ -47,10 +49,13 @@
                               <Insets left="30.0" />
                            </padding>
                         </Label>
-                        <ImageView fitHeight="44.0" fitWidth="68.0" layoutX="623.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/star.png" />
+                           </image></ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="59.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                  <AnchorPane layoutX="10.0" layoutY="85.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <RadioButton layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="18.0" />
                         <Label layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 PSP">
@@ -58,10 +63,14 @@
                               <Insets left="30.0" />
                            </padding>
                         </Label>
-                        <ImageView fitHeight="44.0" fitWidth="68.0" layoutX="623.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/star.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="59.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                  <AnchorPane layoutX="10.0" layoutY="134.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <RadioButton layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="18.0" />
                         <Label layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 2 DI">
@@ -69,21 +78,29 @@
                               <Insets left="30.0" />
                            </padding>
                         </Label>
-                        <ImageView fitHeight="44.0" fitWidth="68.0" layoutX="623.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/star.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="59.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                  <AnchorPane layoutX="10.0" layoutY="183.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <RadioButton layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="18.0" />
-                        <Label layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 DI">
+                        <Label layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 PSP">
                            <padding>
                               <Insets left="30.0" />
                            </padding>
                         </Label>
-                        <ImageView fitHeight="44.0" fitWidth="68.0" layoutX="623.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/star.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="59.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                  <AnchorPane layoutX="10.0" layoutY="232.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <RadioButton layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="18.0" />
                         <Label layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 2 PMDP">
@@ -91,10 +108,14 @@
                               <Insets left="30.0" />
                            </padding>
                         </Label>
-                        <ImageView fitHeight="44.0" fitWidth="68.0" layoutX="623.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/star.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="255.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                  <AnchorPane layoutX="10.0" layoutY="281.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <RadioButton layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="18.0" />
                         <Label layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 PMDP">
@@ -102,7 +123,53 @@
                               <Insets left="30.0" />
                            </padding>
                         </Label>
-                        <ImageView fitHeight="44.0" fitWidth="68.0" layoutX="623.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../Downloads/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="88.0" prefWidth="277.0" style="-fx-background-color: f885d0;" GridPane.rowIndex="2">
+         <children>
+            <VBox layoutX="14.0" prefHeight="88.0" prefWidth="227.0" style="-fx-background-color: cc3b9a;">
+               <children>
+                  <AnchorPane prefHeight="44.0" prefWidth="256.0">
+                     <children>
+                        <ImageView fitHeight="21.0" fitWidth="18.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../AppData/Local/Temp/is-greater-than-mathematical-sign.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="46.0" prefHeight="44.0" prefWidth="193.0" text="Completado   199" textFill="WHITE">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="256.0">
+                     <children>
+                        <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="14.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../AppData/Local/Temp/plus.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="46.0" prefHeight="44.0" prefWidth="193.0" text="Agregar una tarea" textFill="WHITE">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                </children>
