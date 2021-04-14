@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="651.0" prefWidth="888.0" style="-fx-background-color: #FF69B4;" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="495.0" prefWidth="715.0">
+         <children>
+            <VBox layoutX="13.0" layoutY="14.0" prefHeight="468.0" prefWidth="691.0" spacing="5.0">
+               <children>
+                  <AnchorPane prefHeight="43.0" prefWidth="691.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="37.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../AppData/Local/Temp/home.png" />
+                           </image></ImageView>
+                        <Label layoutX="46.0" prefHeight="50.0" prefWidth="577.0" text="  Tareas" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="646.0" layoutY="5.0" prefHeight="38.0" prefWidth="31.0" text="..." textAlignment="JUSTIFY" textFill="WHITE">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <RadioButton layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="18.0" />
+                        <Label layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 2 PSP">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="44.0" fitWidth="68.0" layoutX="623.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="59.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <RadioButton layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="18.0" />
+                        <Label layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 PSP">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="44.0" fitWidth="68.0" layoutX="623.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="59.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <RadioButton layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="18.0" />
+                        <Label layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 2 DI">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="44.0" fitWidth="68.0" layoutX="623.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="59.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <RadioButton layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="18.0" />
+                        <Label layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 DI">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="44.0" fitWidth="68.0" layoutX="623.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="59.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <RadioButton layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="18.0" />
+                        <Label layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 2 PMDP">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="44.0" fitWidth="68.0" layoutX="623.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="255.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <RadioButton layoutX="14.0" layoutY="12.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="18.0" />
+                        <Label layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 PMDP">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="44.0" fitWidth="68.0" layoutX="623.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
