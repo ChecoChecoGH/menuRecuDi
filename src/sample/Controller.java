@@ -9,7 +9,6 @@ import javafx.scene.layout.AnchorPane;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Controller {
     @FXML
@@ -25,7 +24,6 @@ public class Controller {
 
     ArrayList <Label> alLabels = new ArrayList<>();
 
-    Scanner tc = new Scanner(System.in);
     boolean encontrado = false;
     int i = 0;
 
@@ -78,8 +76,6 @@ public class Controller {
 
         if(i >= TAM)
             anchorPane2.setDisable(true);
-
-
     }
 
     @FXML
