@@ -28,13 +28,16 @@ public class Controller {
     @FXML
     TextField textField;
 
-    ArrayList <Label> alLabels = new ArrayList<>(Arrays.asList(label1, label2, label3, label4, label5, label6));
-
-    final int TAM = alLabels.size()-1;
+    ArrayList <Label> alLabels = new ArrayList<>();
 
     Scanner tc = new Scanner(System.in);
     boolean encontrado = false;
     int i = 0;
+
+    @FXML
+    public void initialize() {
+        alLabels.addAll(Arrays.asList(label1, label2, label3, label4, label5, label6));
+    }
 
 
     @FXML
@@ -73,40 +76,43 @@ public class Controller {
         checkLabels();
     }
 
-    @FXML
-    public void clickTextField(){
-        textField.setText(tc.nextLine());
-    }
 
     public void checkLabels(){
+        final int TAM = alLabels.size()-1;
         i = 0;
         encontrado = false;
         do{
             if(alLabels.get(i).getText().isEmpty()){
-                anchorPane2.setDisable(true);
+                anchorPane2.setDisable(false);
                 encontrado = true;
             }else
                 i++;
         }while(!encontrado && i < TAM);
+
+        if(i >= TAM)
+            anchorPane2.setDisable(true);
+
+
     }
 
 
     @FXML
     public void clickBotonAdd() {
+        final int TAM = alLabels.size()-1;
         i = 0;
         encontrado = false;
         do{
             if(alLabels.get(i).getText().isEmpty()){
-                System.out.println("alLabels("+i+")" + alLabels.get(i));
-                System.out.println("TextField" + textField.getText());
                 alLabels.get(i).setText(textField.getText());
+                textField.setText("");
                 encontrado=true;
             }
             i++;
         }while(!encontrado && i < TAM);
-
-
+        checkLabels();
     }
+
+
 
 
 }

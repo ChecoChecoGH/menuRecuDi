@@ -161,7 +161,7 @@
                               <Image url="@../imagenes/plus.png" />
                            </image>
                         </ImageView>
-                        <TextField fx:id="textField" layoutX="46.0" onMouseClicked="#clickTextField" prefHeight="44.0" prefWidth="193.0" style="-fx-background-color: cc3b9a;" text="Agregar una tarea">
+                        <TextField fx:id="textField" layoutX="46.0" prefHeight="44.0" prefWidth="193.0" promptText="Agregar una tarea" style="-fx-background-color: cc3b9a;">
                            <font>
                               <Font name="System Bold" size="18.0" />
                            </font>
