@@ -12,19 +12,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Controller {
-
     @FXML
     RadioButton boton1, boton2, boton3, boton4, boton5, boton6;
-
     @FXML
     ImageView botonAdd;
-
     @FXML
     Label label1, label2, label3, label4, label5, label6;
-
     @FXML
     AnchorPane anchorPane2;
-
     @FXML
     TextField textField;
 
@@ -38,44 +33,36 @@ public class Controller {
     public void initialize() {
         alLabels.addAll(Arrays.asList(label1, label2, label3, label4, label5, label6));
     }
-
-
     @FXML
     public void clickBoton1() {
         label1.setText("");
-        checkLabels();
+        anchorPane2.setDisable(false);
     }
-
     @FXML
     public void clickBoton2() {
         label2.setText("");
-        checkLabels();
+        anchorPane2.setDisable(false);
     }
-
     @FXML
     public void clickBoton3() {
         label3.setText("");
-        checkLabels();
+        anchorPane2.setDisable(false);
     }
-
     @FXML
     public void clickBoton4() {
         label4.setText("");
-        checkLabels();
+        anchorPane2.setDisable(false);
     }
-
     @FXML
     public void clickBoton5() {
         label5.setText("");
-        checkLabels();
+        anchorPane2.setDisable(false);
     }
-
     @FXML
     public void clickBoton6() {
         label6.setText("");
-        checkLabels();
+        anchorPane2.setDisable(false);
     }
-
 
     public void checkLabels(){
         final int TAM = alLabels.size()-1;
@@ -95,7 +82,6 @@ public class Controller {
 
     }
 
-
     @FXML
     public void clickBotonAdd() {
         final int TAM = alLabels.size()-1;
@@ -111,8 +97,4 @@ public class Controller {
         }while(!encontrado && i < TAM);
         checkLabels();
     }
-
-
-
-
 }
