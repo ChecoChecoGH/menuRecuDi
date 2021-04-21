@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Controller {
+    final int TAMINICIALARRAYS = 6;
+
     @FXML
     RadioButton boton1, boton2, boton3, boton4, boton5, boton6;
     @FXML
@@ -18,12 +20,15 @@ public class Controller {
     @FXML
     Label label1, label2, label3, label4, label5, label6;
     @FXML
+    ImageView favorito1, favorito2, favorito3, favorito4, favorito5, favorito6;
+    @FXML
     AnchorPane anchorPane2;
     @FXML
     TextField textField;
 
     ArrayList <Label> listaLabels = new ArrayList<>();
     ArrayList <Tarea> listaTareas = new ArrayList<>();
+    ArrayList <ImageView> listaFavoritos = new ArrayList<>();
 
     boolean encontrado = false;
     int i = 0;
@@ -41,15 +46,13 @@ public class Controller {
         tarea5 = new Tarea(false, "Hacer práctica 2 PMDM");
         tarea6 = new Tarea(false, "Hacer práctica 1 PMDM");
 
-        Binder.binderTarea(tarea1, label1);
-        Binder.binderTarea(tarea2, label2);
-        Binder.binderTarea(tarea3, label3);
-        Binder.binderTarea(tarea4, label4);
-        Binder.binderTarea(tarea5, label5);
-        Binder.binderTarea(tarea6, label6);
-
-        listaLabels.addAll(Arrays.asList(label1, label2, label3, label4, label5, label6));
         listaTareas.addAll(Arrays.asList(tarea1, tarea2, tarea3, tarea4, tarea5, tarea6));
+        listaLabels.addAll(Arrays.asList(label1, label2, label3, label4, label5, label6));
+        listaFavoritos.addAll(Arrays.asList(favorito1, favorito2, favorito3, favorito4, favorito5, favorito6));
+
+        for(int i = 0; i < TAMINICIALARRAYS; i++)
+            Binder.binderTarea(listaTareas.get(i), listaLabels.get(i), listaFavoritos.get(i));
+
     }
     @FXML
     public void clickBoton1() {
@@ -106,10 +109,11 @@ public class Controller {
         do{
             Label label = listaLabels.get(i);
             Tarea tarea = listaTareas.get(i);
+            ImageView imageView = listaFavoritos.get(i);
             if(listaLabels.get(i).getText().isEmpty()){
                 tarea.texto = textField.getText();
                 textField.setText("");
-                Binder.binderTarea(tarea, label);
+                Binder.binderTarea(tarea, label, imageView);
                 encontrado=true;
             }
             i++;
