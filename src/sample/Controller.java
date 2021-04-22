@@ -27,9 +27,6 @@ public class Controller {
     File fileEstrellaAmarilla = new File("src/imagenes/estrella.png");
     Image imagenEstrella = new Image(fileEstrella.toURI().toString());
     Image imagenEstrellaAmarilla = new Image(fileEstrellaAmarilla.toURI().toString());
-    //String uriEstrella = fileEstrella.toURI().toString();
-    //String uriEstrellaAmarilla = fileEstrellaAmarilla.toURI().toString();
-
 
     @FXML
     AnchorPane anchorPane2;
@@ -44,7 +41,6 @@ public class Controller {
     int i = 0;
 
     Tarea tarea1, tarea2, tarea3, tarea4, tarea5, tarea6;
-
 
     @FXML
     public void initialize() {
@@ -65,10 +61,7 @@ public class Controller {
 
     }
 
-
-
-
-
+    //CLICK EN BORRAR
     @FXML
     public void clickBoton1() {
         tarea1.texto = "";
@@ -118,13 +111,14 @@ public class Controller {
         anchorPane2.setDisable(false);
     }
 
+    //CLICK EN ESTRELLAS
     @FXML
     public void clickEstrella1(){
         if(!tarea1.texto.isEmpty()) {
             tarea1.favorito = !tarea1.favorito;
-            if (tarea1.favorito) {
+            if (tarea1.favorito)
                 tarea1.imagen = imagenEstrellaAmarilla;
-            } else
+            else
                 tarea1.imagen = imagenEstrella;
             Binder.binderTarea(tarea1, label1, favorito1);
         }
@@ -134,9 +128,9 @@ public class Controller {
     public void clickEstrella2(){
         if(!tarea2.texto.isEmpty()){
             tarea2.favorito = !tarea2.favorito;
-            if(tarea2.favorito){
+            if(tarea2.favorito)
                 tarea2.imagen = imagenEstrellaAmarilla;
-            }else
+            else
                 tarea2.imagen = imagenEstrella;
             Binder.binderTarea(tarea2, label2, favorito2);
         }
@@ -146,9 +140,9 @@ public class Controller {
     public void clickEstrella3(){
         if(!tarea3.texto.isEmpty()) {
             tarea3.favorito = !tarea3.favorito;
-            if (tarea3.favorito) {
+            if (tarea3.favorito)
                 tarea3.imagen = imagenEstrellaAmarilla;
-            } else
+            else
                 tarea3.imagen = imagenEstrella;
             Binder.binderTarea(tarea3, label3, favorito3);
         }
@@ -157,9 +151,9 @@ public class Controller {
     public void clickEstrella4(){
         if(!tarea4.texto.isEmpty()) {
             tarea4.favorito = !tarea4.favorito;
-            if (tarea4.favorito) {
+            if (tarea4.favorito)
                 tarea4.imagen = imagenEstrellaAmarilla;
-            } else
+            else
                 tarea4.imagen = imagenEstrella;
             Binder.binderTarea(tarea4, label4, favorito4);
         }
@@ -168,9 +162,9 @@ public class Controller {
     public void clickEstrella5(){
         if(!tarea5.texto.isEmpty()) {
             tarea5.favorito = !tarea5.favorito;
-            if (tarea5.favorito) {
+            if (tarea5.favorito)
                 tarea5.imagen = imagenEstrellaAmarilla;
-            } else
+            else
                 tarea5.imagen = imagenEstrella;
             Binder.binderTarea(tarea5, label5, favorito5);
         }
@@ -179,16 +173,13 @@ public class Controller {
     public void clickEstrella6(){
         if(!tarea6.texto.isEmpty()) {
             tarea6.favorito = !tarea6.favorito;
-            if (tarea6.favorito) {
+            if (tarea6.favorito)
                 tarea6.imagen = imagenEstrellaAmarilla;
-            } else
+            else
                 tarea6.imagen = imagenEstrella;
             Binder.binderTarea(tarea6, label6, favorito6);
         }
     }
-
-
-
 
     public void checkLabels(){
         final int TAMANO = listaLabels.size()-1;
