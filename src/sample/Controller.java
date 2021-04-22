@@ -4,9 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -21,6 +23,14 @@ public class Controller {
     Label label1, label2, label3, label4, label5, label6;
     @FXML
     ImageView favorito1, favorito2, favorito3, favorito4, favorito5, favorito6;
+    File fileEstrella = new File("src/imagenes/star.png");
+    File fileEstrellaAmarilla = new File("src/imagenes/estrella.png");
+    Image imagenEstrella = new Image(fileEstrella.toURI().toString());
+    Image imagenEstrellaAmarilla = new Image(fileEstrellaAmarilla.toURI().toString());
+    //String uriEstrella = fileEstrella.toURI().toString();
+    //String uriEstrellaAmarilla = fileEstrellaAmarilla.toURI().toString();
+
+
     @FXML
     AnchorPane anchorPane2;
     @FXML
@@ -39,12 +49,12 @@ public class Controller {
     @FXML
     public void initialize() {
 
-        tarea1 = new Tarea(false, "Hacer práctica 2 PSP");
-        tarea2 = new Tarea(false, "Hacer práctica 1 PSP");
-        tarea3 = new Tarea(false, "Hacer práctica 2 DI");
-        tarea4 = new Tarea(false, "Hacer práctica 1 DI");
-        tarea5 = new Tarea(false, "Hacer práctica 2 PMDM");
-        tarea6 = new Tarea(false, "Hacer práctica 1 PMDM");
+        tarea1 = new Tarea(false, "Hacer práctica 2 PSP", imagenEstrella);
+        tarea2 = new Tarea(false, "Hacer práctica 1 PSP", imagenEstrella);
+        tarea3 = new Tarea(false, "Hacer práctica 2 DI", imagenEstrella);
+        tarea4 = new Tarea(false, "Hacer práctica 1 DI", imagenEstrella);
+        tarea5 = new Tarea(false, "Hacer práctica 2 PMDM", imagenEstrella);
+        tarea6 = new Tarea(false, "Hacer práctica 1 PMDM", imagenEstrella);
 
         listaTareas.addAll(Arrays.asList(tarea1, tarea2, tarea3, tarea4, tarea5, tarea6));
         listaLabels.addAll(Arrays.asList(label1, label2, label3, label4, label5, label6));
@@ -54,36 +64,131 @@ public class Controller {
             Binder.binderTarea(listaTareas.get(i), listaLabels.get(i), listaFavoritos.get(i));
 
     }
+
+
+
+
+
     @FXML
     public void clickBoton1() {
-        label1.setText("");
+        tarea1.texto = "";
+        tarea1.favorito = false;
+        tarea1.imagen = imagenEstrella;
+        Binder.binderTarea(tarea1, label1, favorito1);
         anchorPane2.setDisable(false);
     }
     @FXML
     public void clickBoton2() {
-        label2.setText("");
+        tarea2.texto = "";
+        tarea2.favorito = false;
+        tarea2.imagen = imagenEstrella;
+        Binder.binderTarea(tarea2, label2, favorito2);
         anchorPane2.setDisable(false);
     }
     @FXML
     public void clickBoton3() {
-        label3.setText("");
+        tarea3.texto = "";
+        tarea3.favorito = false;
+        tarea3.imagen = imagenEstrella;
+        Binder.binderTarea(tarea3, label3, favorito3);
         anchorPane2.setDisable(false);
     }
     @FXML
     public void clickBoton4() {
-        label4.setText("");
+        tarea4.texto = "";
+        tarea4.favorito = false;
+        tarea4.imagen = imagenEstrella;
+        Binder.binderTarea(tarea4, label4, favorito4);
         anchorPane2.setDisable(false);
     }
     @FXML
     public void clickBoton5() {
-        label5.setText("");
+        tarea5.texto = "";
+        tarea5.favorito = false;
+        tarea5.imagen = imagenEstrella;
+        Binder.binderTarea(tarea5, label5, favorito5);
         anchorPane2.setDisable(false);
     }
     @FXML
     public void clickBoton6() {
-        label6.setText("");
+        tarea6.texto = "";
+        tarea6.favorito = false;
+        tarea6.imagen = imagenEstrella;
+        Binder.binderTarea(tarea6, label6, favorito6);
         anchorPane2.setDisable(false);
     }
+
+    @FXML
+    public void clickEstrella1(){
+        if(!tarea1.texto.isEmpty()) {
+            tarea1.favorito = !tarea1.favorito;
+            if (tarea1.favorito) {
+                tarea1.imagen = imagenEstrellaAmarilla;
+            } else
+                tarea1.imagen = imagenEstrella;
+            Binder.binderTarea(tarea1, label1, favorito1);
+        }
+
+    }
+    @FXML
+    public void clickEstrella2(){
+        if(!tarea2.texto.isEmpty()){
+            tarea2.favorito = !tarea2.favorito;
+            if(tarea2.favorito){
+                tarea2.imagen = imagenEstrellaAmarilla;
+            }else
+                tarea2.imagen = imagenEstrella;
+            Binder.binderTarea(tarea2, label2, favorito2);
+        }
+
+    }
+    @FXML
+    public void clickEstrella3(){
+        if(!tarea3.texto.isEmpty()) {
+            tarea3.favorito = !tarea3.favorito;
+            if (tarea3.favorito) {
+                tarea3.imagen = imagenEstrellaAmarilla;
+            } else
+                tarea3.imagen = imagenEstrella;
+            Binder.binderTarea(tarea3, label3, favorito3);
+        }
+    }
+    @FXML
+    public void clickEstrella4(){
+        if(!tarea4.texto.isEmpty()) {
+            tarea4.favorito = !tarea4.favorito;
+            if (tarea4.favorito) {
+                tarea4.imagen = imagenEstrellaAmarilla;
+            } else
+                tarea4.imagen = imagenEstrella;
+            Binder.binderTarea(tarea4, label4, favorito4);
+        }
+    }
+    @FXML
+    public void clickEstrella5(){
+        if(!tarea5.texto.isEmpty()) {
+            tarea5.favorito = !tarea5.favorito;
+            if (tarea5.favorito) {
+                tarea5.imagen = imagenEstrellaAmarilla;
+            } else
+                tarea5.imagen = imagenEstrella;
+            Binder.binderTarea(tarea5, label5, favorito5);
+        }
+    }
+    @FXML
+    public void clickEstrella6(){
+        if(!tarea6.texto.isEmpty()) {
+            tarea6.favorito = !tarea6.favorito;
+            if (tarea6.favorito) {
+                tarea6.imagen = imagenEstrellaAmarilla;
+            } else
+                tarea6.imagen = imagenEstrella;
+            Binder.binderTarea(tarea6, label6, favorito6);
+        }
+    }
+
+
+
 
     public void checkLabels(){
         final int TAMANO = listaLabels.size()-1;

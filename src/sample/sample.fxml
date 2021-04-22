@@ -48,7 +48,7 @@
                               <Insets left="30.0" />
                            </padding>
                         </Label>
-                        <ImageView fx:id="favorito1" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="favorito1" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" onMouseClicked="#clickEstrella1" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../imagenes/star.png" />
                            </image></ImageView>
@@ -62,7 +62,7 @@
                               <Insets left="30.0" />
                            </padding>
                         </Label>
-                        <ImageView fx:id="favorito2" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="favorito2" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" onMouseClicked="#clickEstrella2" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../imagenes/star.png" />
                            </image>
@@ -77,7 +77,7 @@
                               <Insets left="30.0" />
                            </padding>
                         </Label>
-                        <ImageView fx:id="favorito3" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="favorito3" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" onMouseClicked="#clickEstrella3" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../imagenes/star.png" />
                            </image>
@@ -92,7 +92,7 @@
                               <Insets left="30.0" />
                            </padding>
                         </Label>
-                        <ImageView fx:id="favorito4" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="favorito4" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" onMouseClicked="#clickEstrella4" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../imagenes/star.png" />
                            </image>
@@ -107,7 +107,7 @@
                               <Insets left="30.0" />
                            </padding>
                         </Label>
-                        <ImageView fx:id="favorito5" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="favorito5" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" onMouseClicked="#clickEstrella5" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../imagenes/star.png" />
                            </image>
@@ -122,7 +122,7 @@
                               <Insets left="30.0" />
                            </padding>
                         </Label>
-                        <ImageView fx:id="favorito6" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="favorito6" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" onMouseClicked="#clickEstrella6" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@../imagenes/star.png" />
                            </image>
