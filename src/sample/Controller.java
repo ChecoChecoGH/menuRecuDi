@@ -6,6 +6,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import java.io.File;
@@ -62,6 +63,17 @@ public class Controller {
     }
 
     //CLICK EN BORRAR
+    //Funcion que le paso un clickBoton
+
+   /* public void ClickBotonBorrado(MouseEvent mouseEvent){
+        switch(mouseEvent.getButton()){
+
+        }
+    }
+
+    */
+
+
     @FXML
     public void clickBoton1() {
         tarea1.texto = "";
@@ -112,6 +124,7 @@ public class Controller {
     }
 
     //CLICK EN ESTRELLAS
+    //funcion que le paso un clickEstrella
     @FXML
     public void clickEstrella1(){
         if(!tarea1.texto.isEmpty()) {
@@ -199,7 +212,7 @@ public class Controller {
 
     @FXML
     public void clickBotonAdd() {
-        final int TAMANO = listaLabels.size()-1;
+        final int TAMANO = listaLabels.size();
         i = 0;
         encontrado = false;
         do{
@@ -213,6 +226,7 @@ public class Controller {
                 encontrado=true;
             }
             i++;
+            System.out.println(i);
         }while(!encontrado && i < TAMANO);
         checkLabels();
     }
