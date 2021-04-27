@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane alignment="center" hgap="10" prefHeight="651.0" prefWidth="888.0" style="-fx-background-color: f885d0;" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="387.0" prefWidth="715.0">
+         <children>
+            <VBox layoutX="13.0" layoutY="14.0" prefHeight="371.0" prefWidth="691.0" spacing="5.0">
+               <children>
+                  <AnchorPane prefHeight="43.0" prefWidth="691.0">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="37.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                              <Image url="@../imagenes/home.png" />
+                           </ImageView>
+                        <Label layoutX="46.0" prefHeight="50.0" prefWidth="577.0" text="  Tareas" textFill="WHITE">
+                           <font>
+                              <Font name="Comic Sans MS" size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="646.0" layoutY="5.0" prefHeight="38.0" prefWidth="31.0" text="..." textAlignment="JUSTIFY" textFill="WHITE">
+                           <font>
+                              <Font size="28.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <RadioButton fx:id="boton1" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton1" prefHeight="21.0" prefWidth="18.0" />
+                        <Label fx:id="label1" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 2 PSP">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fx:id="favorito1" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" onMouseClicked="#clickEstrella1" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/star.png" />
+                           </image></ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="85.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <RadioButton fx:id="boton2" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton2" prefHeight="21.0" prefWidth="18.0" />
+                        <Label fx:id="label2" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 PSP">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fx:id="favorito2" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" onMouseClicked="#clickEstrella2" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="134.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <RadioButton fx:id="boton3" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton3" prefHeight="21.0" prefWidth="18.0" />
+                        <Label fx:id="label3" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 2 DI">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fx:id="favorito3" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" onMouseClicked="#clickEstrella3" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="183.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <RadioButton fx:id="boton4" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton4" prefHeight="21.0" prefWidth="18.0" />
+                        <Label fx:id="label4" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 PSP">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fx:id="favorito4" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" onMouseClicked="#clickEstrella4" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="232.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <RadioButton fx:id="boton5" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton5" prefHeight="21.0" prefWidth="18.0" />
+                        <Label fx:id="label5" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 2 PMDP">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fx:id="favorito5" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" onMouseClicked="#clickEstrella5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="281.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                     <children>
+                        <RadioButton fx:id="boton6" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton6" prefHeight="21.0" prefWidth="18.0" />
+                        <Label fx:id="label6" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 PMDP">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fx:id="favorito6" fitHeight="29.0" fitWidth="21.0" layoutX="646.0" layoutY="12.0" onMouseClicked="#clickEstrella6" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorPane2" disable="true" prefHeight="88.0" prefWidth="277.0" style="-fx-background-color: f885d0;" GridPane.rowIndex="2">
+         <children>
+            <VBox layoutX="14.0" prefHeight="88.0" prefWidth="227.0" style="-fx-background-color: cc3b9a;">
+               <children>
+                  <AnchorPane prefHeight="44.0" prefWidth="256.0">
+                     <children>
+                        <ImageView fitHeight="21.0" fitWidth="18.0" layoutX="14.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/signo.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="29.0" prefHeight="44.0" prefWidth="210.0" text="Completado 199" textFill="WHITE">
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="44.0" prefWidth="256.0">
+                     <children>
+                        <ImageView fx:id="botonAdd" fitHeight="21.0" fitWidth="25.0" layoutX="14.0" layoutY="12.0" onMouseClicked="#clickBotonAdd" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imagenes/plus.png" />
+                           </image>
+                        </ImageView>
+                        <TextField fx:id="textField" layoutX="46.0" prefHeight="44.0" prefWidth="193.0" promptText="Agregar una tarea" style="-fx-background-color: cc3b9a;">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
