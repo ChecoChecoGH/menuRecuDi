@@ -68,8 +68,6 @@ public class Controller {
     }
 
 
-
-
     @FXML
     public void clickBoton1() {
         tarea1.texto = "";
