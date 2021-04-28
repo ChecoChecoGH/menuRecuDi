@@ -60,8 +60,10 @@ public class Controller {
     //CLICK EN BORRAR
     //Funcion que le paso un clickBoton
     //System.out.println(MouseInfo.getNumberOfButtons());
-   public void ClickBotonBorrado(MouseEvent mouseEvent){
-        MouseInfo.getNumberOfButtons();
+    @FXML
+   public void clickBotonBorrado(MouseEvent mouseEvent){
+        System.out.println(mouseEvent.getSource().toString());
+        //casting para que entienda que es un boton puesto que solo sabe que le paso un objeto
         switch(mouseEvent.getButton()){
             //case
         }
