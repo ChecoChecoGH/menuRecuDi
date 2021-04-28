@@ -29,9 +29,12 @@ public class Controller {
     @FXML
     TextField textField;
 
+    ArrayList <String> listaNombreBotones = new ArrayList<>();
     ArrayList <Label> listaLabels = new ArrayList<>();
     ArrayList <Tarea> listaTareas = new ArrayList<>();
     ArrayList <ImageView> listaFavoritos = new ArrayList<>();
+
+    String nombre = "boton1";
 
     boolean encontrado = false;
     int i = 0;
@@ -48,6 +51,7 @@ public class Controller {
         tarea5 = new Tarea(false, "Hacer práctica 2 PMDM");
         tarea6 = new Tarea(false, "Hacer práctica 1 PMDM");
 
+        listaNombreBotones.addAll(Arrays.asList(boton1.getId(), boton2.getId(), boton3.getId(), boton4.getId(), boton5.getId(), boton6.getId()));
         listaTareas.addAll(Arrays.asList(tarea1, tarea2, tarea3, tarea4, tarea5, tarea6));
         listaLabels.addAll(Arrays.asList(label1, label2, label3, label4, label5, label6));
         listaFavoritos.addAll(Arrays.asList(favorito1, favorito2, favorito3, favorito4, favorito5, favorito6));
@@ -62,11 +66,29 @@ public class Controller {
     //System.out.println(MouseInfo.getNumberOfButtons());
     @FXML
    public void clickBotonBorrado(MouseEvent mouseEvent){
-        System.out.println(mouseEvent.getSource().toString());
-        //casting para que entienda que es un boton puesto que solo sabe que le paso un objeto
-        switch(mouseEvent.getButton()){
-            //case
+        System.out.println(mouseEvent.getSource());
+        if(mouseEvent.getSource() instanceof RadioButton){
+            String aux = ((RadioButton) mouseEvent.getSource()).getId();
+            int i = 0;
+            int TAM = listaNombreBotones.size();
+            boolean encontrado = false;
+            do{
+                if(!listaNombreBotones.get(i).equals(aux))
+                    encontrado = true;
+                else
+                    i++;
+            }while(!encontrado && i < TAM);
+
+            //System.out.println(((RadioButton) mouseEvent.getSource()).getId());
+            //String cadena = boton1.getId();
+            switch(((RadioButton) mouseEvent.getSource()).getId()){
+                case nombre:
+            }
         }
+
+
+        //casting para que entienda que es un boton puesto que solo sabe que le paso un objeto
+
     }
 
 

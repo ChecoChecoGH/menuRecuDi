@@ -42,7 +42,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
                      <children>
-                        <RadioButton fx:id="boton1" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton1" prefHeight="21.0" prefWidth="18.0" />
+                        <RadioButton fx:id="boton1" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBotonBorrado" prefHeight="21.0" prefWidth="18.0" />
                         <Label fx:id="label1" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 2 PSP">
                            <padding>
                               <Insets left="30.0" />
