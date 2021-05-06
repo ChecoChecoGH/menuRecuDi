@@ -1,14 +1,16 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-
-import java.awt.*;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -81,9 +83,9 @@ public class Controller {
 
             //System.out.println(((RadioButton) mouseEvent.getSource()).getId());
             //String cadena = boton1.getId();
-            switch(((RadioButton) mouseEvent.getSource()).getId()){
-                case nombre:
-            }
+            //switch(((RadioButton) mouseEvent.getSource()).getId()){
+              //  case nombre:
+           // }
         }
 
 
@@ -134,6 +136,51 @@ public class Controller {
          Binder.binderTarea(tarea6, label6, favorito6);
          anchorPane2.setDisable(false);
      }
+
+     //CLICK ANCHORPANE
+    @FXML
+    public void clickAnchorPane1(){
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
+            AnchorPane root = loader.load();
+            Scene scene = new Scene(root,450,410);
+            stage.setScene(scene);
+
+            stage.show();
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void clickAnchorPane2(){
+
+    }
+
+    @FXML
+    public void clickAnchorPane3(){
+
+    }
+
+    @FXML
+    public void clickAnchorPane4(){
+
+    }
+
+    @FXML
+    public void clickAnchorPane5(){
+
+    }
+
+    @FXML
+    public void clickAnchorPane6(){
+
+    }
+
+
+
 
     //CLICK EN ESTRELLAS
     //funcion que le paso un clickEstrella
