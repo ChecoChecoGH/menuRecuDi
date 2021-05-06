@@ -3,14 +3,23 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerVentana2">
+<AnchorPane prefHeight="270.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerVentana2">
    <children>
-      <Label text="Fecha modificación" />
-      <TextArea prefHeight="200.0" prefWidth="200.0" />
-      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-      <Label text="Fecha creación" />
-      <Label text="Detalles de la asignatura" />
+      <Label layoutX="450" layoutY="20" text="Fecha creación">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label layoutX="450" layoutY="60" text="Fecha modificación">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TextArea layoutX="70" layoutY="30" prefHeight="200.0" prefWidth="360.0" AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="30.0" />
+      <ImageView fitHeight="37.7" fitWidth="27.3" layoutX="10" layoutY="110" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" />
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="450" layoutY="120" prefHeight="100" prefWidth="200" text="Detalle 1 de la tarea Detalle 2 de la tarea Detalle 3 de la tarea" wrapText="true">
+         <font>
+            <Font name="Comic Sans MS Italic" size="16.0" />
+         </font></Label>
    </children>
 </AnchorPane>

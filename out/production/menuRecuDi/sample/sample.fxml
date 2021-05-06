@@ -40,10 +40,10 @@
                         <Insets bottom="20.0" />
                      </VBox.margin>
                   </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                  <AnchorPane fx:id="anchorPane1" layoutX="10.0" layoutY="10.0" onMouseClicked="#clickAnchorPane1" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
                      <children>
-                        <RadioButton fx:id="boton1" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBotonBorrado" prefHeight="21.0" prefWidth="18.0" />
-                        <Label fx:id="label1" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 2 PSP">
+                        <RadioButton fx:id="boton1" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton1" prefHeight="21.0" prefWidth="18.0" />
+                        <Label fx:id="label1" layoutX="46.0" prefHeight="44.0" prefWidth="640.0" text="Hacer Práctica 2 PSP">
                            <padding>
                               <Insets left="30.0" />
                            </padding>
@@ -54,7 +54,7 @@
                            </image></ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="85.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                  <AnchorPane fx:id="anchorPane2" layoutX="10.0" layoutY="85.0" onMouseClicked="#clickAnchorPane2" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <RadioButton fx:id="boton2" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton2" prefHeight="21.0" prefWidth="18.0" />
                         <Label fx:id="label2" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 PSP">
@@ -69,7 +69,7 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="134.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                  <AnchorPane fx:id="anchorPane3" layoutX="10.0" layoutY="134.0" onMouseClicked="#clickAnchorPane3" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <RadioButton fx:id="boton3" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton3" prefHeight="21.0" prefWidth="18.0" />
                         <Label fx:id="label3" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 2 DI">
@@ -84,7 +84,7 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="183.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                  <AnchorPane fx:id="anchorPane4" layoutX="10.0" layoutY="183.0" onMouseClicked="#clickAnchorPane4" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <RadioButton fx:id="boton4" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton4" prefHeight="21.0" prefWidth="18.0" />
                         <Label fx:id="label4" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 PSP">
@@ -99,7 +99,7 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="232.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                  <AnchorPane fx:id="anchorPane5" layoutX="10.0" layoutY="232.0" onMouseClicked="#clickAnchorPane5" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <RadioButton fx:id="boton5" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton5" prefHeight="21.0" prefWidth="18.0" />
                         <Label fx:id="label5" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 2 PMDP">
@@ -114,7 +114,7 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="10.0" layoutY="281.0" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
+                  <AnchorPane fx:id="anchorPane6" layoutX="10.0" layoutY="281.0" onMouseClicked="#clickAnchorPane6" prefHeight="43.0" prefWidth="691.0" style="-fx-background-color: #FFFFFF;">
                      <children>
                         <RadioButton fx:id="boton6" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#clickBoton6" prefHeight="21.0" prefWidth="18.0" />
                         <Label fx:id="label6" layoutX="46.0" prefHeight="44.0" prefWidth="577.0" text="Hacer Práctica 1 PMDP">

@@ -27,7 +27,7 @@ public class Controller {
     ImageView favorito1, favorito2, favorito3, favorito4, favorito5, favorito6;
 
     @FXML
-    AnchorPane anchorPane2;
+    AnchorPane anchorPane2Grande;
     @FXML
     TextField textField;
 
@@ -99,42 +99,42 @@ public class Controller {
         tarea1.texto = "";
         tarea1.favorito = false;
         Binder.binderTarea(tarea1, label1, favorito1);
-        anchorPane2.setDisable(false);
+        anchorPane2Grande.setDisable(false);
     }
     @FXML
     public void clickBoton2() {
         tarea2.texto = "";
         tarea2.favorito = false;
         Binder.binderTarea(tarea2, label2, favorito2);
-        anchorPane2.setDisable(false);
+        anchorPane2Grande.setDisable(false);
     }
     @FXML
     public void clickBoton3() {
         tarea3.texto = "";
         tarea3.favorito = false;
         Binder.binderTarea(tarea3, label3, favorito3);
-        anchorPane2.setDisable(false);
+        anchorPane2Grande.setDisable(false);
     }
     @FXML
     public void clickBoton4() {
         tarea4.texto = "";
         tarea4.favorito = false;
         Binder.binderTarea(tarea4, label4, favorito4);
-        anchorPane2.setDisable(false);
+        anchorPane2Grande.setDisable(false);
     }
     @FXML
     public void clickBoton5() {
         tarea5.texto = "";
         tarea5.favorito = false;
         Binder.binderTarea(tarea5, label5, favorito5);
-        anchorPane2.setDisable(false);
+        anchorPane2Grande.setDisable(false);
     }
     @FXML
      public void clickBoton6() {
          tarea6.texto = "";
          tarea6.favorito = false;
          Binder.binderTarea(tarea6, label6, favorito6);
-         anchorPane2.setDisable(false);
+         anchorPane2Grande.setDisable(false);
      }
 
      //CLICK ANCHORPANE
@@ -233,14 +233,14 @@ public class Controller {
         encontrado = false;
         do{
             if(listaLabels.get(i).getText().isEmpty()){
-                anchorPane2.setDisable(false);
+                anchorPane2Grande.setDisable(false);
                 encontrado = true;
             }else
                 i++;
         }while(!encontrado && i < TAMANO);
 
         if(i >= TAMANO)
-            anchorPane2.setDisable(true);
+            anchorPane2Grande.setDisable(true);
     }
 
     @FXML
