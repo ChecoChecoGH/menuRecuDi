@@ -9,8 +9,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -25,18 +27,19 @@ public class Controller {
     Label label1, label2, label3, label4, label5, label6;
     @FXML
     ImageView favorito1, favorito2, favorito3, favorito4, favorito5, favorito6;
-
+    @FXML
+    AnchorPane anchorPane1, anchorPane2, anchorPane3, anchorPane4, anchorPane5, anchorPane6;
     @FXML
     AnchorPane anchorPane2Grande;
     @FXML
     TextField textField;
 
+    ControllerVentana2 controllerVentana2 = null;
+
     ArrayList <String> listaNombreBotones = new ArrayList<>();
     ArrayList <Label> listaLabels = new ArrayList<>();
     ArrayList <Tarea> listaTareas = new ArrayList<>();
     ArrayList <ImageView> listaFavoritos = new ArrayList<>();
-
-    String nombre = "boton1";
 
     boolean encontrado = false;
     int i = 0;
@@ -143,8 +146,10 @@ public class Controller {
         try {
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
+
             AnchorPane root = loader.load();
-            Scene scene = new Scene(root,450,410);
+
+            Scene scene = new Scene(root,800, 400);
             stage.setScene(scene);
 
             stage.show();
@@ -155,8 +160,23 @@ public class Controller {
     }
 
     @FXML
-    public void clickAnchorPane2(){
+    public void clickAnchorPane2(MouseEvent mouseEvent){
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
 
+            AnchorPane root = loader.load();
+
+            controllerVentana2 = loader.getController();
+           //controllerVentana2.idFechaCreacion.setText(String.valueOf(System.currentTimeMillis()));
+
+            Scene scene = new Scene(root,800,400);
+            stage.setScene(scene);
+            stage.show();
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

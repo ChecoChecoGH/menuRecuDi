@@ -133,7 +133,7 @@
             </VBox>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="anchorPane2" disable="true" prefHeight="88.0" prefWidth="277.0" style="-fx-background-color: f885d0;" GridPane.rowIndex="2">
+      <AnchorPane fx:id="anchorPane2Grande" disable="true" prefHeight="88.0" prefWidth="277.0" style="-fx-background-color: f885d0;" GridPane.rowIndex="2">
          <children>
             <VBox layoutX="14.0" prefHeight="88.0" prefWidth="227.0" style="-fx-background-color: cc3b9a;">
                <children>

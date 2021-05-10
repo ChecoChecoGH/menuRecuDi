@@ -5,21 +5,31 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="270.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerVentana2">
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerVentana2">
    <children>
-      <Label layoutX="450" layoutY="20" text="Fecha creación">
+      <Label layoutX="14.0" layoutY="188.0" text="Fecha creación: ">
          <font>
-            <Font size="24.0" />
+            <Font size="14.0" />
          </font></Label>
-      <Label layoutX="450" layoutY="60" text="Fecha modificación">
+      <Label layoutX="14.0" layoutY="209.0" text="Fecha modificación: ">
          <font>
-            <Font size="24.0" />
+            <Font size="14.0" />
          </font></Label>
-      <TextArea layoutX="70" layoutY="30" prefHeight="200.0" prefWidth="360.0" AnchorPane.bottomAnchor="30.0" AnchorPane.topAnchor="30.0" />
-      <ImageView fitHeight="37.7" fitWidth="27.3" layoutX="10" layoutY="110" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="15.0" />
-      <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="450" layoutY="120" prefHeight="100" prefWidth="200" text="Detalle 1 de la tarea Detalle 2 de la tarea Detalle 3 de la tarea" wrapText="true">
+      <TextArea fx:id="idTextArea" layoutX="28.0" layoutY="29.0" onMouseClicked="#clickTextArea" prefHeight="38.0" prefWidth="226.0" AnchorPane.bottomAnchor="172.0" AnchorPane.topAnchor="29.0" />
+      <ImageView fx:id="idFavorito" fitHeight="76.0" fitWidth="63.0" layoutX="110.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="110.0" />
+      <Label fx:id="idDetalles" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="269.0" layoutY="18.0" prefHeight="208.0" prefWidth="315.0" text="Detalles: " textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Comic Sans MS Italic" size="16.0" />
          </font></Label>
+      <Label fx:id="idFechaCreacion" layoutX="140.0" layoutY="188.0" prefHeight="20.0" prefWidth="99.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="idFechaModificacion" layoutX="140.0" layoutY="210.0" prefHeight="20.0" prefWidth="99.0" text="Label">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -1,17 +1,13 @@
 package sample;
 
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.io.File;
+import java.util.Date;
 
-public class Binder {
-
-    public static void binderTarea(Tarea tarea, Label label, ImageView imageView){
-
-        label.setText(tarea.texto);
-
+public class BinderVentana2 {
+    public static void binderTarea2(Tarea tarea, ImageView imageView){
         if(tarea.favorito){
             File fileEstrellaAmarilla = new File("src/imagenes/estrella.png");
             Image imagenEstrellaAmarilla = new Image(fileEstrellaAmarilla.toURI().toString());
