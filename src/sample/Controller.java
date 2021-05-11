@@ -9,10 +9,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-
-import java.io.IOException;
+import javafx.stage.StageStyle;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -27,14 +25,11 @@ public class Controller {
     Label label1, label2, label3, label4, label5, label6;
     @FXML
     ImageView favorito1, favorito2, favorito3, favorito4, favorito5, favorito6;
-    @FXML
-    AnchorPane anchorPane1, anchorPane2, anchorPane3, anchorPane4, anchorPane5, anchorPane6;
+
     @FXML
     AnchorPane anchorPane2Grande;
     @FXML
     TextField textField;
-
-    ControllerVentana2 controllerVentana2 = null;
 
     ArrayList <String> listaNombreBotones = new ArrayList<>();
     ArrayList <Label> listaLabels = new ArrayList<>();
@@ -49,12 +44,12 @@ public class Controller {
     @FXML
     public void initialize() {
 
-        tarea1 = new Tarea(false, "Hacer práctica 2 PSP");
-        tarea2 = new Tarea(false, "Hacer práctica 1 PSP");
-        tarea3 = new Tarea(false, "Hacer práctica 2 DI");
-        tarea4 = new Tarea(false, "Hacer práctica 1 DI");
-        tarea5 = new Tarea(false, "Hacer práctica 2 PMDM");
-        tarea6 = new Tarea(false, "Hacer práctica 1 PMDM");
+        tarea1 = new Tarea(false, "Hacer práctica 2 PSP", "Ejercicios 1 y 2");
+        tarea2 = new Tarea(false, "Hacer práctica 1 PSP", "Ejercicios propuestos en el aula");
+        tarea3 = new Tarea(false, "Hacer práctica 2 DI", "Tarea 7");
+        tarea4 = new Tarea(false, "Hacer práctica 1 DI", "Crear proyecto de DI");
+        tarea5 = new Tarea(false, "Hacer práctica 2 PMDM", "Acabar proyecto DI");
+        tarea6 = new Tarea(false, "Hacer práctica 1 PMDM", "tikitiki");
 
         listaNombreBotones.addAll(Arrays.asList(boton1.getId(), boton2.getId(), boton3.getId(), boton4.getId(), boton5.getId(), boton6.getId()));
         listaTareas.addAll(Arrays.asList(tarea1, tarea2, tarea3, tarea4, tarea5, tarea6));
@@ -141,15 +136,14 @@ public class Controller {
      }
 
      //CLICK ANCHORPANE
+    //hacer funcion para optimizarlo
     @FXML
     public void clickAnchorPane1(){
         try {
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
-
             AnchorPane root = loader.load();
-
-            Scene scene = new Scene(root,800, 400);
+            Scene scene = new Scene(root,600,300);
             stage.setScene(scene);
 
             stage.show();
@@ -160,18 +154,14 @@ public class Controller {
     }
 
     @FXML
-    public void clickAnchorPane2(MouseEvent mouseEvent){
+    public void clickAnchorPane2(){
         try {
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
-
             AnchorPane root = loader.load();
-
-            controllerVentana2 = loader.getController();
-           //controllerVentana2.idFechaCreacion.setText(String.valueOf(System.currentTimeMillis()));
-
-            Scene scene = new Scene(root,800,400);
+            Scene scene = new Scene(root,600,300);
             stage.setScene(scene);
+
             stage.show();
 
         } catch(Exception e) {
@@ -181,22 +171,66 @@ public class Controller {
 
     @FXML
     public void clickAnchorPane3(){
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
+            AnchorPane root = loader.load();
+            Scene scene = new Scene(root,600,300);
+            stage.setScene(scene);
 
+            stage.show();
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     public void clickAnchorPane4(){
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
+            AnchorPane root = loader.load();
+            Scene scene = new Scene(root,600,300);
+            stage.setScene(scene);
 
+            stage.show();
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     public void clickAnchorPane5(){
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
+            AnchorPane root = loader.load();
+            Scene scene = new Scene(root,600,300);
+            stage.setScene(scene);
 
+            stage.show();
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
     public void clickAnchorPane6(){
+        try {
+            Stage stage = new Stage();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
+            AnchorPane root = loader.load();
+            Scene scene = new Scene(root,600,300);
+            stage.setScene(scene);
 
+            stage.show();
+
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
     }
 
 

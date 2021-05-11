@@ -14,13 +14,13 @@ public class ControllerVentana2 {
     @FXML
     TextArea idTextArea;
 
-    Controller controller;
 
-    @FXML
-    public void initialize() {
-        for(int i = 0; i < controller.TAMINICIALARRAYS; i++)
-            BinderVentana2.binderTarea2(controller.listaTareas.get(i), controller.listaFavoritos.get(i));
+    public Tarea configurarTarea(Tarea t){
+        
+        return t;
     }
+
+
 
     @FXML
     public void clickTextArea(MouseEvent mouseEvent){

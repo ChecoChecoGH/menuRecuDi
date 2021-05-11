@@ -7,6 +7,10 @@
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerVentana2">
    <children>
+      <TextArea fx:id="idTextArea" layoutX="20" layoutY="20" onInputMethodTextChanged="#clickTextArea" prefHeight="100.0" prefWidth="300.0">
+         <font>
+            <Font size="24.0" />
+         </font></TextArea>
       <Label layoutX="14.0" layoutY="188.0" text="Fecha creación: ">
          <font>
             <Font size="14.0" />
@@ -15,7 +19,6 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <TextArea fx:id="idTextArea" layoutX="28.0" layoutY="29.0" onMouseClicked="#clickTextArea" prefHeight="38.0" prefWidth="226.0" AnchorPane.bottomAnchor="172.0" AnchorPane.topAnchor="29.0" />
       <ImageView fx:id="idFavorito" fitHeight="76.0" fitWidth="63.0" layoutX="110.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="110.0" />
       <Label fx:id="idDetalles" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="269.0" layoutY="18.0" prefHeight="208.0" prefWidth="315.0" text="Detalles: " textAlignment="CENTER" wrapText="true">
          <font>
