@@ -96,6 +96,9 @@ public class Controller {
     public void clickBoton1() {
         tarea1.texto = "";
         tarea1.favorito = false;
+        tarea1.detalles = "";
+        tarea1.fechaCreacion = null;
+        tarea1.ultimaModificacion = null;
         Binder.binderTarea(tarea1, label1, favorito1);
         anchorPane2Grande.setDisable(false);
     }
@@ -103,6 +106,9 @@ public class Controller {
     public void clickBoton2() {
         tarea2.texto = "";
         tarea2.favorito = false;
+        tarea2.detalles = "";
+        tarea2.fechaCreacion = null;
+        tarea2.ultimaModificacion = null;
         Binder.binderTarea(tarea2, label2, favorito2);
         anchorPane2Grande.setDisable(false);
     }
@@ -110,6 +116,9 @@ public class Controller {
     public void clickBoton3() {
         tarea3.texto = "";
         tarea3.favorito = false;
+        tarea3.detalles = "";
+        tarea3.fechaCreacion = null;
+        tarea3.ultimaModificacion = null;
         Binder.binderTarea(tarea3, label3, favorito3);
         anchorPane2Grande.setDisable(false);
     }
@@ -117,6 +126,9 @@ public class Controller {
     public void clickBoton4() {
         tarea4.texto = "";
         tarea4.favorito = false;
+        tarea4.detalles = "";
+        tarea4.fechaCreacion = null;
+        tarea4.ultimaModificacion = null;
         Binder.binderTarea(tarea4, label4, favorito4);
         anchorPane2Grande.setDisable(false);
     }
@@ -124,6 +136,9 @@ public class Controller {
     public void clickBoton5() {
         tarea5.texto = "";
         tarea5.favorito = false;
+        tarea5.detalles = "";
+        tarea5.fechaCreacion = null;
+        tarea5.ultimaModificacion = null;
         Binder.binderTarea(tarea5, label5, favorito5);
         anchorPane2Grande.setDisable(false);
     }
@@ -131,6 +146,9 @@ public class Controller {
      public void clickBoton6() {
          tarea6.texto = "";
          tarea6.favorito = false;
+         tarea6.detalles = "";
+         tarea6.fechaCreacion = null;
+         tarea6.ultimaModificacion = null;
          Binder.binderTarea(tarea6, label6, favorito6);
          anchorPane2Grande.setDisable(false);
      }
@@ -143,7 +161,7 @@ public class Controller {
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
             AnchorPane root = loader.load();
-            Scene scene = new Scene(root,600,300);
+            Scene scene = new Scene(root,683,243);
             stage.setScene(scene);
 
             ControllerVentana2 controller = loader.getController();
@@ -162,7 +180,7 @@ public class Controller {
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
             AnchorPane root = loader.load();
-            Scene scene = new Scene(root,600,300);
+            Scene scene = new Scene(root,683,243);
             stage.setScene(scene);
 
             ControllerVentana2 controller = loader.getController();
@@ -181,7 +199,7 @@ public class Controller {
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
             AnchorPane root = loader.load();
-            Scene scene = new Scene(root,600,300);
+            Scene scene = new Scene(root,683,243);
             stage.setScene(scene);
 
             ControllerVentana2 controller = loader.getController();
@@ -200,7 +218,7 @@ public class Controller {
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
             AnchorPane root = loader.load();
-            Scene scene = new Scene(root,600,300);
+            Scene scene = new Scene(root,683,243);
             stage.setScene(scene);
 
             ControllerVentana2 controller = loader.getController();
@@ -219,7 +237,7 @@ public class Controller {
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
             AnchorPane root = loader.load();
-            Scene scene = new Scene(root,600,300);
+            Scene scene = new Scene(root,683,243);
             stage.setScene(scene);
 
             ControllerVentana2 controller = loader.getController();
@@ -238,7 +256,7 @@ public class Controller {
             Stage stage = new Stage();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ventana2.fxml"));
             AnchorPane root = loader.load();
-            Scene scene = new Scene(root,600,300);
+            Scene scene = new Scene(root,683,243);
             stage.setScene(scene);
 
             ControllerVentana2 controller = loader.getController();
@@ -257,46 +275,52 @@ public class Controller {
     //CLICK EN ESTRELLAS
     //funcion que le paso un clickEstrella
     @FXML
-    public void clickEstrella1(){
+    public void clickEstrella1(MouseEvent e){
         if(!tarea1.texto.isEmpty()) {
             tarea1.favorito = !tarea1.favorito;
             Binder.binderTarea(tarea1, label1, favorito1);
         }
+        e.consume();
     }
     @FXML
-    public void clickEstrella2(){
+    public void clickEstrella2(MouseEvent e){
         if(!tarea2.texto.isEmpty()){
             tarea2.favorito = !tarea2.favorito;
             Binder.binderTarea(tarea2, label2, favorito2);
         }
+        e.consume();
     }
     @FXML
-    public void clickEstrella3(){
+    public void clickEstrella3(MouseEvent e){
         if(!tarea3.texto.isEmpty()) {
             tarea3.favorito = !tarea3.favorito;
             Binder.binderTarea(tarea3, label3, favorito3);
         }
+        e.consume();
     }
     @FXML
-    public void clickEstrella4(){
+    public void clickEstrella4(MouseEvent e){
         if(!tarea4.texto.isEmpty()) {
             tarea4.favorito = !tarea4.favorito;
             Binder.binderTarea(tarea4, label4, favorito4);
         }
+        e.consume();
     }
     @FXML
-    public void clickEstrella5(){
+    public void clickEstrella5(MouseEvent e){
         if(!tarea5.texto.isEmpty()) {
             tarea5.favorito = !tarea5.favorito;
             Binder.binderTarea(tarea5, label5, favorito5);
         }
+        e.consume();
     }
     @FXML
-    public void clickEstrella6(){
+    public void clickEstrella6(MouseEvent e){
         if(!tarea6.texto.isEmpty()) {
             tarea6.favorito = !tarea6.favorito;
             Binder.binderTarea(tarea6, label6, favorito6);
         }
+        e.consume();
     }
 
     public void checkLabels(){

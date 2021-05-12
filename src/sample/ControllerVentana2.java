@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 import java.io.File;
+import java.text.DateFormat;
 import java.util.Date;
 
 public class ControllerVentana2 {
@@ -24,9 +25,14 @@ public class ControllerVentana2 {
     File fileEstrella = new File("src/imagenes/star.png");
     Image imagenEstrella = new Image(fileEstrella.toURI().toString());
 
+    Tarea tareaOriginal = new Tarea(false,"","");
 
     public Tarea configurarTarea(Tarea tarea){
-        //Tarea tareaAux = new Tarea(false, "", "");
+        tareaOriginal.texto = tarea.texto;
+        tareaOriginal.detalles = tarea.detalles;
+        tareaOriginal.favorito = tarea.favorito;
+        tareaOriginal.fechaCreacion = tarea.fechaCreacion;
+        tareaOriginal.ultimaModificacion = tarea.ultimaModificacion;
 
         idTextArea.setText(tarea.texto);
         idDetalles.setText(tarea.detalles);
@@ -35,17 +41,21 @@ public class ControllerVentana2 {
         else
             idFavorito.setImage(imagenEstrella);
 
-        idFechaCreacion.setText(tarea.fechaCreacion.toString());
-        idFechaModificacion.setText(tarea.ultimaModificacion.toString());
+        if(tarea.fechaCreacion != null){
+            idFechaCreacion.setText(tarea.fechaCreacion.toString());
+            idFechaModificacion.setText(tarea.ultimaModificacion.toString());
 
+            idFechaCreacion.setText(tarea.fechaCreacion.toString());
+            idFechaModificacion.setText(tarea.ultimaModificacion.toString());
+        }
         return tarea;
     }
 
-
-
     @FXML
-    public void clickTextArea(MouseEvent mouseEvent){
+    public void clickTextArea(){
+
         Date resultdate = new Date(System.currentTimeMillis());
         idFechaModificacion.setText(resultdate.toString());
+
     }
 }
