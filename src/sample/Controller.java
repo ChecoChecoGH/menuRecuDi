@@ -146,6 +146,9 @@ public class Controller {
             Scene scene = new Scene(root,600,300);
             stage.setScene(scene);
 
+            ControllerVentana2 controller = loader.getController();
+            controller.configurarTarea(tarea1);
+
             stage.show();
 
         } catch(Exception e) {
@@ -161,6 +164,9 @@ public class Controller {
             AnchorPane root = loader.load();
             Scene scene = new Scene(root,600,300);
             stage.setScene(scene);
+
+            ControllerVentana2 controller = loader.getController();
+            controller.configurarTarea(tarea2);
 
             stage.show();
 
@@ -178,6 +184,9 @@ public class Controller {
             Scene scene = new Scene(root,600,300);
             stage.setScene(scene);
 
+            ControllerVentana2 controller = loader.getController();
+            controller.configurarTarea(tarea3);
+
             stage.show();
 
         } catch(Exception e) {
@@ -193,6 +202,9 @@ public class Controller {
             AnchorPane root = loader.load();
             Scene scene = new Scene(root,600,300);
             stage.setScene(scene);
+
+            ControllerVentana2 controller = loader.getController();
+            controller.configurarTarea(tarea4);
 
             stage.show();
 
@@ -210,6 +222,9 @@ public class Controller {
             Scene scene = new Scene(root,600,300);
             stage.setScene(scene);
 
+            ControllerVentana2 controller = loader.getController();
+            controller.configurarTarea(tarea5);
+
             stage.show();
 
         } catch(Exception e) {
@@ -225,6 +240,9 @@ public class Controller {
             AnchorPane root = loader.load();
             Scene scene = new Scene(root,600,300);
             stage.setScene(scene);
+
+            ControllerVentana2 controller = loader.getController();
+            controller.configurarTarea(tarea6);
 
             stage.show();
 

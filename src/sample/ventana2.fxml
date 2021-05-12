@@ -7,6 +7,7 @@
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerVentana2">
    <children>
+      <ImageView fitHeight="86.0" fitWidth="99.0" pickOnBounds="true" preserveRatio="true" />
       <TextArea fx:id="idTextArea" layoutX="20" layoutY="20" onInputMethodTextChanged="#clickTextArea" prefHeight="100.0" prefWidth="300.0">
          <font>
             <Font size="24.0" />
@@ -19,17 +20,16 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <ImageView fx:id="idFavorito" fitHeight="76.0" fitWidth="63.0" layoutX="110.0" layoutY="87.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="110.0" />
-      <Label fx:id="idDetalles" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="269.0" layoutY="18.0" prefHeight="208.0" prefWidth="315.0" text="Detalles: " textAlignment="CENTER" wrapText="true">
+      <Label fx:id="idDetalles" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="342.0" layoutY="18.0" prefHeight="100.0" prefWidth="242.0" text="Detalles: " textAlignment="CENTER" wrapText="true">
          <font>
             <Font name="Comic Sans MS Italic" size="16.0" />
          </font></Label>
-      <Label fx:id="idFechaCreacion" layoutX="140.0" layoutY="188.0" prefHeight="20.0" prefWidth="99.0" text="Label">
+      <Label fx:id="idFechaCreacion" layoutX="140.0" layoutY="188.0" prefHeight="20.0" prefWidth="178.0" text="Label">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="idFechaModificacion" layoutX="140.0" layoutY="210.0" prefHeight="20.0" prefWidth="99.0" text="Label">
+      <Label fx:id="idFechaModificacion" layoutX="140.0" layoutY="210.0" prefHeight="20.0" prefWidth="178.0" text="Label">
          <font>
             <Font size="14.0" />
          </font>
