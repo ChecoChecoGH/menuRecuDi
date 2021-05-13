@@ -7,7 +7,7 @@
 
 <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="243.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerVentana2">
    <children>
-      <ImageView fx:id="idFavorito" fitHeight="64.0" fitWidth="66.0" layoutX="25.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="idFavorito" fitHeight="64.0" fitWidth="66.0" layoutX="25.0" layoutY="36.0" onMouseClicked="#clickFavorito" pickOnBounds="true" preserveRatio="true" />
       <TextArea fx:id="idTextArea" layoutX="102.0" layoutY="25.0" onKeyTyped="#clickTextArea" prefHeight="86.0" prefWidth="300.0">
          <font>
             <Font size="24.0" />
