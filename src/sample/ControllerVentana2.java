@@ -44,13 +44,11 @@ public class ControllerVentana2 {
         else
             idFavorito.setImage(imagenEstrella);
 
-        if(tarea.fechaCreacion != null){
+        if(tarea.fechaCreacion != null)
             idFechaCreacion.setText(tarea.fechaCreacion.toString());
-            idFechaModificacion.setText(tarea.ultimaModificacion.toString());
 
-            idFechaCreacion.setText(tarea.fechaCreacion.toString());
+        if(tarea.ultimaModificacion != null)
             idFechaModificacion.setText(tarea.ultimaModificacion.toString());
-        }
     }
 
     @FXML
@@ -58,9 +56,11 @@ public class ControllerVentana2 {
         Date resultdate = new Date(System.currentTimeMillis());
         idFechaModificacion.setText(resultdate.toString());
 
-        if(tareaOriginal.texto.equals(idTextArea.getText())){
-            idFechaModificacion.setText("");
-        }
+        if(tareaOriginal.texto.equals(idTextArea.getText()))
+            if(tareaOriginal.ultimaModificacion != null)
+                idFechaModificacion.setText(tareaOriginal.ultimaModificacion.toString());
+            else
+                idFechaModificacion.setText("");
 
     }
 

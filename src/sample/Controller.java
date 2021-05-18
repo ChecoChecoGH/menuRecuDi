@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 
 public class Controller {
     final int TAMINICIALARRAYS = 6;
@@ -347,9 +348,12 @@ public class Controller {
         do{
             Label label = listaLabels.get(i);
             Tarea tarea = listaTareas.get(i);
+            Date resultdate = new Date(System.currentTimeMillis());
             ImageView imageView = listaFavoritos.get(i);
             if(listaLabels.get(i).getText().isEmpty()){
                 tarea.texto = textField.getText();
+                tarea.fechaCreacion = resultdate;
+                tarea.ultimaModificacion = resultdate;
                 textField.setText("");
                 Binder.binderTarea(tarea, label, imageView);
                 encontrado=true;
