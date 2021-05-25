@@ -10,6 +10,8 @@ import java.io.File;
 import java.util.Date;
 
 public class ControllerVentana2 {
+    private Controller controllerVentana1;
+
     @FXML
     Label idFechaCreacion, idFechaModificacion, idDetalles;
     @FXML
@@ -66,11 +68,28 @@ public class ControllerVentana2 {
 
     @FXML
     public void clickFavorito(){
-        if(idFavorito.getImage() == imagenEstrella)
+        if(idFavorito.getImage() == imagenEstrella) {
             idFavorito.setImage(imagenEstrellaAmarilla);
-        else
+
+            int tam  = controllerVentana1.listaTareas.size();
+            for (int i = 0; i < tam; i++){
+                if (tareaOriginal.texto.equals(controllerVentana1.listaTareas.get(i).detalles)){
+                    controllerVentana1.listaFavoritos.get(i).setImage(imagenEstrellaAmarilla);
+                }
+            }
+        }else {
             idFavorito.setImage(imagenEstrella);
+
+            int tam  = controllerVentana1.listaTareas.size();
+            for (int i = 0; i < tam; i++){
+                if (tareaOriginal.texto.equals(controllerVentana1.listaTareas.get(i).detalles)){
+                    controllerVentana1.listaFavoritos.get(i).setImage(imagenEstrella);
+                }
+            }
+        }
     }
+
+    public void enviarController(Controller controller) { controllerVentana1 = controller; }
 
 
 }

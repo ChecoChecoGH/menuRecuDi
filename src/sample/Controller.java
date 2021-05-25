@@ -168,6 +168,8 @@ public class Controller {
             ControllerVentana2 controller = loader.getController();
             controller.configurarTarea(tarea1);
 
+            controller.enviarController(this);
+
             stage.show();
 
         } catch(Exception e) {
@@ -186,6 +188,8 @@ public class Controller {
 
             ControllerVentana2 controller = loader.getController();
             controller.configurarTarea(tarea2);
+
+            controller.enviarController(this);
 
             stage.show();
 
@@ -206,6 +210,8 @@ public class Controller {
             ControllerVentana2 controller = loader.getController();
             controller.configurarTarea(tarea3);
 
+            controller.enviarController(this);
+
             stage.show();
 
         } catch(Exception e) {
@@ -224,6 +230,8 @@ public class Controller {
 
             ControllerVentana2 controller = loader.getController();
             controller.configurarTarea(tarea4);
+
+            controller.enviarController(this);
 
             stage.show();
 
@@ -244,6 +252,8 @@ public class Controller {
             ControllerVentana2 controller = loader.getController();
             controller.configurarTarea(tarea5);
 
+            controller.enviarController(this);
+
             stage.show();
 
         } catch(Exception e) {
@@ -262,6 +272,8 @@ public class Controller {
 
             ControllerVentana2 controller = loader.getController();
             controller.configurarTarea(tarea6);
+
+            controller.enviarController(this);
 
             stage.show();
 
