@@ -66,28 +66,18 @@ public class ControllerVentana2 {
 
     }
 
+    //todo llamada al binder
     @FXML
     public void clickFavorito(){
         if(idFavorito.getImage() == imagenEstrella) {
             idFavorito.setImage(imagenEstrellaAmarilla);
-
-            int tam  = controllerVentana1.listaTareas.size();
-            for (int i = 0; i < tam; i++){
-                if (tareaOriginal.texto.equals(controllerVentana1.listaTareas.get(i).detalles)){
-                    controllerVentana1.listaFavoritos.get(i).setImage(imagenEstrellaAmarilla);
-                }
-            }
+            controllerVentana1.cambiarEstrellaEnV1(tareaOriginal, imagenEstrellaAmarilla);
         }else {
             idFavorito.setImage(imagenEstrella);
-
-            int tam  = controllerVentana1.listaTareas.size();
-            for (int i = 0; i < tam; i++){
-                if (tareaOriginal.texto.equals(controllerVentana1.listaTareas.get(i).detalles)){
-                    controllerVentana1.listaFavoritos.get(i).setImage(imagenEstrella);
-                }
-            }
+            controllerVentana1.cambiarEstrellaEnV1(tareaOriginal, imagenEstrella);
         }
     }
+
 
     public void enviarController(Controller controller) { controllerVentana1 = controller; }
 

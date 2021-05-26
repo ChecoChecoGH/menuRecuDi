@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -375,5 +376,17 @@ public class Controller {
         }while(!encontrado && i < TAMANO);
         checkLabels();
     }
+
+
+    public void cambiarEstrellaEnV1(Tarea tarea, Image image){
+        int tam  = listaTareas.size();
+        for (int i = 0; i < tam; i++)
+            if (tarea.texto.equals(listaTareas.get(i).detalles))
+                listaFavoritos.get(i).setImage(image);
+
+        for(int i = 0; i < tam; i++)
+            Binder.binderTarea(listaTareas.get(i), listaLabels.get(i), listaFavoritos.get(i));
+    }
+
 
 }
