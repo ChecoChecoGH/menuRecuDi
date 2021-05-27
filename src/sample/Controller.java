@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,10 +11,15 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.stage.Window;
+import javafx.stage.WindowEvent;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Date;
 
 public class Controller {
@@ -32,6 +38,8 @@ public class Controller {
     AnchorPane anchorPane2Grande;
     @FXML
     TextField textField;
+    @FXML
+    VBox vBox;
 
     ArrayList <String> listaNombreBotones = new ArrayList<>();
     ArrayList <Label> listaLabels = new ArrayList<>();
@@ -46,12 +54,12 @@ public class Controller {
     @FXML
     public void initialize() {
 
-        tarea1 = new Tarea(false, "Hacer práctica 2 PSP", "Ejercicios 1 y 2");
-        tarea2 = new Tarea(false, "Hacer práctica 1 PSP", "Ejercicios propuestos en el aula");
-        tarea3 = new Tarea(false, "Hacer práctica 2 DI", "Tarea 7");
-        tarea4 = new Tarea(false, "Hacer práctica 1 DI", "Crear proyecto de DI");
-        tarea5 = new Tarea(false, "Hacer práctica 2 PMDM", "Acabar proyecto DI");
-        tarea6 = new Tarea(false, "Hacer práctica 1 PMDM", "tikitiki");
+        tarea1 = new Tarea(false, "Hacer práctica 2 PSP", "Ejercicios 1 y 2", 0);
+        tarea2 = new Tarea(false, "Hacer práctica 1 PSP", "Ejercicios propuestos en el aula", 1);
+        tarea3 = new Tarea(false, "Hacer práctica 2 DI", "Tarea 7", 2);
+        tarea4 = new Tarea(false, "Hacer práctica 1 DI", "Crear proyecto de DI", 3);
+        tarea5 = new Tarea(false, "Hacer práctica 2 PMDM", "Acabar proyecto DI", 4);
+        tarea6 = new Tarea(false, "Hacer práctica 1 PMDM", "tikitiki", 5);
 
         listaNombreBotones.addAll(Arrays.asList(boton1.getId(), boton2.getId(), boton3.getId(), boton4.getId(), boton5.getId(), boton6.getId()));
         listaTareas.addAll(Arrays.asList(tarea1, tarea2, tarea3, tarea4, tarea5, tarea6));
@@ -166,10 +174,19 @@ public class Controller {
             Scene scene = new Scene(root,683,243);
             stage.setScene(scene);
 
+            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override public void handle(WindowEvent t) {
+                    ordenarTareas();
+                    System.out.println("CLOSING");
+
+                }
+            });
+
             ControllerVentana2 controller = loader.getController();
+            controller.enviarController(this);
             controller.configurarTarea(tarea1);
 
-            controller.enviarController(this);
+
 
             stage.show();
 
@@ -186,6 +203,14 @@ public class Controller {
             AnchorPane root = loader.load();
             Scene scene = new Scene(root,683,243);
             stage.setScene(scene);
+
+            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override public void handle(WindowEvent t) {
+                    ordenarTareas();
+                    System.out.println("CLOSING");
+
+                }
+            });
 
             ControllerVentana2 controller = loader.getController();
             controller.configurarTarea(tarea2);
@@ -208,6 +233,14 @@ public class Controller {
             Scene scene = new Scene(root,683,243);
             stage.setScene(scene);
 
+            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override public void handle(WindowEvent t) {
+                    ordenarTareas();
+                    System.out.println("CLOSING");
+
+                }
+            });
+
             ControllerVentana2 controller = loader.getController();
             controller.configurarTarea(tarea3);
 
@@ -228,6 +261,14 @@ public class Controller {
             AnchorPane root = loader.load();
             Scene scene = new Scene(root,683,243);
             stage.setScene(scene);
+
+            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override public void handle(WindowEvent t) {
+                    ordenarTareas();
+                    System.out.println("CLOSING");
+
+                }
+            });
 
             ControllerVentana2 controller = loader.getController();
             controller.configurarTarea(tarea4);
@@ -250,6 +291,14 @@ public class Controller {
             Scene scene = new Scene(root,683,243);
             stage.setScene(scene);
 
+            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override public void handle(WindowEvent t) {
+                    ordenarTareas();
+                    System.out.println("CLOSING");
+
+                }
+            });
+
             ControllerVentana2 controller = loader.getController();
             controller.configurarTarea(tarea5);
 
@@ -270,6 +319,14 @@ public class Controller {
             AnchorPane root = loader.load();
             Scene scene = new Scene(root,683,243);
             stage.setScene(scene);
+
+            stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+                @Override public void handle(WindowEvent t) {
+                    ordenarTareas();
+                    System.out.println("CLOSING");
+
+                }
+            });
 
             ControllerVentana2 controller = loader.getController();
             controller.configurarTarea(tarea6);
@@ -377,16 +434,33 @@ public class Controller {
         checkLabels();
     }
 
-
-    public void cambiarEstrellaEnV1(Tarea tarea, Image image){
-        int tam  = listaTareas.size();
-        for (int i = 0; i < tam; i++)
-            if (tarea.texto.equals(listaTareas.get(i).detalles))
-                listaFavoritos.get(i).setImage(image);
-
-        for(int i = 0; i < tam; i++)
-            Binder.binderTarea(listaTareas.get(i), listaLabels.get(i), listaFavoritos.get(i));
+    public void cambiarEstrellaEnV1(Tarea tarea){
+        int x = tarea.id;
+        listaTareas.get(x).favorito = !listaTareas.get(x).favorito;
+        Binder.binderTarea(listaTareas.get(x), listaLabels.get(x), listaFavoritos.get(x));
     }
 
+    public void cambiarLabel(Tarea tarea, String texto) {
+        int x = tarea.id;
+        listaTareas.get(x).texto = texto;
+        Binder.binderTarea(listaTareas.get(x), listaLabels.get(x), listaFavoritos.get(x));
+    }
 
+    public void cambiarDetalles(Tarea tarea, String detalles){
+        int x = tarea.id;
+        listaTareas.get(x).detalles = detalles;
+        Binder.binderTarea(listaTareas.get(x), listaLabels.get(x), listaFavoritos.get(x));
+    }
+
+    public void ordenarTareas(){
+        int tam = listaTareas.size();
+        for (int x = 0; x < tam; x++ ){
+            Binder.binderTarea(listaTareas.get(x), listaLabels.get(x), listaFavoritos.get(x));
+        }
+        try{
+            listaTareas.sort(Comparator.comparing(Tarea :: getUltimaModificacion));
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }

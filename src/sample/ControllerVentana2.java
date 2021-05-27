@@ -1,23 +1,28 @@
 package sample;
 
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+import javafx.stage.Window;
+import javafx.stage.WindowEvent;
 
 import java.io.File;
 import java.util.Date;
+import java.util.List;
 
 public class ControllerVentana2 {
     private Controller controllerVentana1;
 
     @FXML
-    Label idFechaCreacion, idFechaModificacion, idDetalles;
+    Label idFechaCreacion, idFechaModificacion;
     @FXML
     ImageView idFavorito;
     @FXML
-    TextArea idTextArea;
+    TextArea idTextArea, idDetalles;
 
     File fileEstrellaAmarilla = new File("src/imagenes/estrella.png");
     Image imagenEstrellaAmarilla = new Image(fileEstrellaAmarilla.toURI().toString());
@@ -25,7 +30,11 @@ public class ControllerVentana2 {
     File fileEstrella = new File("src/imagenes/star.png");
     Image imagenEstrella = new Image(fileEstrella.toURI().toString());
 
-    Tarea tareaOriginal = new Tarea(false,"","");
+    Tarea tareaOriginal = new Tarea(false,"","",null);
+
+    @FXML
+    public void initialize() {
+    }
 
     public void configurarTarea(Tarea tarea){
         tareaOriginal.texto = tarea.texto;
@@ -33,6 +42,7 @@ public class ControllerVentana2 {
         tareaOriginal.favorito = tarea.favorito;
         tareaOriginal.fechaCreacion = tarea.fechaCreacion;
         tareaOriginal.ultimaModificacion = tarea.ultimaModificacion;
+        tareaOriginal.id = tarea.id;
         idTextArea.setText(tarea.texto);
         idDetalles.setText(tarea.detalles);
 
@@ -64,6 +74,21 @@ public class ControllerVentana2 {
             else
                 idFechaModificacion.setText("");
 
+            controllerVentana1.cambiarLabel(tareaOriginal, idTextArea.getText());
+    }
+
+    @FXML
+    public void clickDetalles(){
+        Date resultdate = new Date(System.currentTimeMillis());
+        idFechaModificacion.setText(resultdate.toString());
+
+        if(tareaOriginal.detalles.equals(idDetalles.getText()))
+            if(tareaOriginal.ultimaModificacion != null)
+                idFechaModificacion.setText(tareaOriginal.ultimaModificacion.toString());
+            else
+                idFechaModificacion.setText("");
+
+        controllerVentana1.cambiarDetalles(tareaOriginal, idDetalles.getText());
     }
 
     //todo llamada al binder
@@ -71,15 +96,16 @@ public class ControllerVentana2 {
     public void clickFavorito(){
         if(idFavorito.getImage() == imagenEstrella) {
             idFavorito.setImage(imagenEstrellaAmarilla);
-            controllerVentana1.cambiarEstrellaEnV1(tareaOriginal, imagenEstrellaAmarilla);
+            controllerVentana1.cambiarEstrellaEnV1(tareaOriginal);
         }else {
             idFavorito.setImage(imagenEstrella);
-            controllerVentana1.cambiarEstrellaEnV1(tareaOriginal, imagenEstrella);
+            controllerVentana1.cambiarEstrellaEnV1(tareaOriginal);
         }
     }
 
-
     public void enviarController(Controller controller) { controllerVentana1 = controller; }
+
+
 
 
 }

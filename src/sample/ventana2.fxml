@@ -20,10 +20,6 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Label fx:id="idDetalles" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="132.0" prefHeight="97.0" prefWidth="655.0" text="Detalles: " textAlignment="CENTER" wrapText="true">
-         <font>
-            <Font name="Comic Sans MS Italic" size="16.0" />
-         </font></Label>
       <Label fx:id="idFechaCreacion" layoutX="436.0" layoutY="46.0" prefHeight="20.0" prefWidth="237.0">
          <font>
             <Font size="14.0" />
@@ -34,5 +30,6 @@
             <Font size="14.0" />
          </font>
       </Label>
+      <TextArea fx:id="idDetalles" layoutX="23.0" layoutY="132.0" onKeyTyped="#clickDetalles" prefHeight="95.0" prefWidth="637.0" />
    </children>
 </AnchorPane>
