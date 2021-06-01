@@ -47,8 +47,8 @@ public class ControllerVentana2 {
         idDetalles.setText(tarea.detalles);
 
         if(idTextArea.getText().isEmpty()){
-            Date resultdate = new Date(System.currentTimeMillis());
-            idFechaCreacion.setText(resultdate.toString());
+            Date resultDate = new Date(System.currentTimeMillis());
+            idFechaCreacion.setText(resultDate.toString());
         }
 
         if(tarea.favorito)
@@ -59,8 +59,11 @@ public class ControllerVentana2 {
         if(tarea.fechaCreacion != null)
             idFechaCreacion.setText(tarea.fechaCreacion.toString());
 
-        if(tarea.ultimaModificacion != null)
+        if(tarea.ultimaModificacion != null){
             idFechaModificacion.setText(tarea.ultimaModificacion.toString());
+            tarea.ultimaModificacion = new Date(tarea.ultimaModificacion.getTime());
+            System.out.println(tarea.ultimaModificacion);
+        }
     }
 
     @FXML

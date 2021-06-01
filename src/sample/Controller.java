@@ -324,7 +324,6 @@ public class Controller {
                 @Override public void handle(WindowEvent t) {
                     ordenarTareas();
                     System.out.println("CLOSING");
-
                 }
             });
 
@@ -453,14 +452,12 @@ public class Controller {
     }
 
     public void ordenarTareas(){
+        try{ listaTareas.sort(Comparator.comparing(Tarea :: getUltimaModificacion));
+        }catch (Exception e){ e.printStackTrace(); }
         int tam = listaTareas.size();
-        for (int x = 0; x < tam; x++ ){
+        for (int x = 0; x < tam; x++ )
             Binder.binderTarea(listaTareas.get(x), listaLabels.get(x), listaFavoritos.get(x));
-        }
-        try{
-            listaTareas.sort(Comparator.comparing(Tarea :: getUltimaModificacion));
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+
+        for (Tarea listaTarea : listaTareas) System.out.println(listaTarea.getUltimaModificacion());
     }
 }
