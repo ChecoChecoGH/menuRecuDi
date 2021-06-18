@@ -452,7 +452,8 @@ public class Controller {
     }
 
     public void ordenarTareas(){
-        try{ listaTareas.sort(Comparator.comparing(Tarea :: getUltimaModificacion));
+        try{
+            listaTareas.sort(Comparator.comparing(Tarea :: getUltimaModificacion));
         }catch (Exception e){ e.printStackTrace(); }
         int tam = listaTareas.size();
         for (int x = 0; x < tam; x++ )
